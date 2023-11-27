@@ -1,0 +1,759 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:1:7687).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:1:7687).
+; Unable to resolve symbol: i in this context
+clj꞉robot-name꞉> 
+(robot-name/let
+ [robot-name/i (robot-name/rand-int 26)]
+ (robot-name/char (robot-name/+ (robot-name/int \A) robot-name/i)))
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+(robot-name/let
+ [robot-name/i (robot-name/rand-int 26)]
+ (robot-name/char (robot-name/+ (robot-name/int \A) robot-name/i)))
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:6:3).
+; Unable to resolve symbol: let in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:7:11).
+; Unable to resolve symbol: + in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:1:7687).
+; Unable to resolve symbol: i in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defmacro in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: deffn in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:3:22).
+; Unable to resolve symbol: atom in this context
+clj꞉robot-name꞉> (ns user)
+nil
+clj꞉user꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+(ns user)
+nil
+clj꞉user꞉> 
+(defn h [] (+ 1 1))
+1
+clj꞉user꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> (defn h [] (+ 1 1))
+1
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:6:3).
+; Unable to resolve symbol: let in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:6:3).
+; Unable to resolve symbol: let in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:5:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+[]
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:15:1).
+; Unable to resolve symbol: defn in this context
+clj꞉robot-name꞉> 
+nil
+clj꞉robot-name꞉> 
+#'robot-name/existing-robots
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> (macroexpand-1 random-letter)
+; Syntax error compiling at (output.calva-repl:135:18).
+; Can't take value of a macro: #'robot-name/random-letter
+clj꞉robot-name꞉> 
+(macroexpand-1 random-letter)
+; Syntax error compiling at (output.calva-repl:139:1).
+; Can't take value of a macro: #'robot-name/random-letter
+clj꞉robot-name꞉> 
+(macroexpand random-letter)
+macroexpand
+clj꞉robot-name꞉> 
+(macroexpand-all random-letter)
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Unable to resolve symbol: macroexpand-all in this context
+clj꞉robot-name꞉> 
+(macroexpand-all random-letter)
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Unable to resolve symbol: macroexpand-all in this context
+clj꞉robot-name꞉> 
+(macroexpand-1 random-letter)
+; Syntax error compiling at (output.calva-repl:154:1).
+; Can't take value of a macro: #'robot-name/random-letter
+clj꞉robot-name꞉> 
+(macroexpand random-letter)
+#function[clojure.core/macroexpand]
+clj꞉robot-name꞉> 
+(macroexpand-1 (random-letter))
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Can't take value of a macro: #'robot-name/random-letter
+clj꞉robot-name꞉> 
+(macroexpand (random-letter))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:165:14).
+; robot-name/i - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/i - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+:clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+
+:clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+:clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+j
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Unable to resolve symbol: j in this context
+clj꞉robot-name꞉> 
+(macroexpand (random-letter))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:183:14).
+; robot-name/i - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/i - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+(random-letter)
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:190:1).
+; robot-name/i - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/i - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: ((random-letter))
+clj꞉robot-name꞉> 
+(macroexpand '(random-letter))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:197:1).
+; robot-name/i - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/i - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+(macroexpand '(random-letter))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:204:1).
+; robot-name/i - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/i - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/i - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+(macroexpand '(random-letter))
+(clojure.core/char (clojure.core/+ (clojure.core/int \A) robot-name/i))
+clj꞉robot-name꞉> 
+(macroexpand-1 '(random-letter))
+#function[clojure.core/macroexpand-1]
+clj꞉robot-name꞉> 
+(macroexpand-1 '(random-letter))
+(clojure.core/char (clojure.core/+ (clojure.core/int \A) robot-name/i))
+clj꞉robot-name꞉> (random-letter)
+; Syntax error compiling at (output.calva-repl:221:18).
+; No such var: robot-name/i
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+(random-letter)
+\E
+clj꞉robot-name꞉> 
+(random-letter)
+\I
+clj꞉robot-name꞉> 
+(random-letter)
+\R
+clj꞉robot-name꞉> 
+(random-letter)
+\B
+clj꞉robot-name꞉> 
+(random-letter)
+\Q
+clj꞉robot-name꞉> 
+(random-letter)
+\B
+clj꞉robot-name꞉> 
+(random-letter)
+\P
+clj꞉robot-name꞉> 
+(random-letter)
+\W
+clj꞉robot-name꞉> 
+(random-letter)
+\I
+clj꞉robot-name꞉> 
+(random-letter)
+\P
+clj꞉robot-name꞉> 
+(random-letter)
+\P
+clj꞉robot-name꞉> 
+(random-letter)
+\A
+clj꞉robot-name꞉> 
+(random-letter)
+\H
+clj꞉robot-name꞉> 
+(str "abc" 123)
+"abc123"
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+#function[robot-name/gen-name]
+clj꞉robot-name꞉> 
+(gen-name)
+""
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:12:12).
+; Unable to resolve symbol: ret in this context
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+""
+clj꞉robot-name꞉> 
+(gen-name)
+""
+clj꞉robot-name꞉> 
+(gen-name)
+""
+clj꞉robot-name꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (robot_name.clj:12:26).
+; Can only recur from tail position
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+""
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(count "")
+0
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"BBB692"
+clj꞉robot-name꞉> 
+(gen-name)
+"BBB472"
+clj꞉robot-name꞉> 
+(gen-name)
+"BBB520"
+clj꞉robot-name꞉> 
+(gen-name)
+"BBB664"
+clj꞉robot-name꞉> 
+(gen-name)
+"BBB233"
+clj꞉robot-name꞉> 
+(gen-name)
+"BBB644"
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"MM783"
+clj꞉robot-name꞉> 
+(gen-name)
+"MM734"
+clj꞉robot-name꞉> 
+(gen-name)
+"MM196"
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"(clojure.core/char (clojure.core/+ (clojure.core/int \\A) 23))"
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+; Execution error (IllegalStateException) at robot-name/random-letter (form-init3654999581233849966.clj:7).
+; Attempting to call unbound fn: #'clojure.core/unquote
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"DL413"
+clj꞉robot-name꞉> 
+(gen-name)
+"IW326"
+clj꞉robot-name꞉> 
+(gen-name)
+"QA795"
+clj꞉robot-name꞉> 
+(gen-name)
+"GJ362"
+clj꞉robot-name꞉> 
+(gen-name)
+"VY619"
+clj꞉robot-name꞉> 
+(gen-name)
+"ZI402"
+clj꞉robot-name꞉> 
+(gen-name)
+"EP310"
+clj꞉robot-name꞉> 
+(gen-name)
+"IF720"
+clj꞉robot-name꞉> 
+(gen-name)
+"NX922"
+clj꞉robot-name꞉> 
+(gen-name)
+"ZA754"
+clj꞉robot-name꞉> 
+(gen-name)
+"FS540"
+clj꞉robot-name꞉> 
+(contains? #{} \a)
+false
+clj꞉robot-name꞉> 
+(contains? #{\a} \a)
+true
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+nil
+clj꞉robot-name꞉> 
+#'robot-name/existing-robots
+clj꞉robot-name꞉> 
+#'robot-name/random-letter
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"VI300"
+clj꞉robot-name꞉> 
+(gen-name)
+"DQ361"
+clj꞉robot-name꞉> 
+(cons #{} \a)
+; Execution error (IllegalArgumentException) at robot-name/eval7574 (form-init3654999581233849966.clj:411).
+; Don't know how to create ISeq from: java.lang.Character
+clj꞉robot-name꞉> 
+(conj #{} \a)
+#{\a}
+clj꞉robot-name꞉> 
+(conj #{\a} \a)
+#{\a}
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"OY016"
+clj꞉robot-name꞉> 
+exi
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Unable to resolve symbol: exi in this context
+clj꞉robot-name꞉> 
+existing-robots
+#<Atom@77847fba: nil>
+clj꞉robot-name꞉> 
+@existing-robots
+nil
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+; Execution error (ClassCastException) at robot-name/gen-name (form-init3654999581233849966.clj:16).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+; Execution error (ClassCastException) at robot-name/gen-name (form-init3654999581233849966.clj:16).
+; java.lang.String cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+(swap! existing-robots (conj "a"))
+; Execution error (ClassCastException) at robot-name/eval7591 (form-init3654999581233849966.clj:448).
+; java.lang.String cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+(swap! existing-robots '(conj "a"))
+; Execution error (ClassCastException) at robot-name/eval7593 (form-init3654999581233849966.clj:452).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+(swap! existing-robots `(conj "a"))
+; Execution error (ClassCastException) at robot-name/eval7595 (form-init3654999581233849966.clj:456).
+; clojure.lang.Cons cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+(swap! existing-robots (conj existing-robots "a"))
+; Execution error (ClassCastException) at robot-name/eval7597 (form-init3654999581233849966.clj:460).
+; clojure.lang.Atom cannot be cast to clojure.lang.IPersistentCollection
+clj꞉robot-name꞉> 
+(swap! existing-robots (conj @existing-robots "a"))
+; Execution error (ClassCastException) at robot-name/eval7599 (form-init3654999581233849966.clj:464).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+(swap! existing-robots (cons @existing-robots "a"))
+; Execution error (ClassCastException) at robot-name/eval7601 (form-init3654999581233849966.clj:468).
+; clojure.lang.Cons cannot be cast to clojure.lang.IFn
+clj꞉robot-name꞉> 
+(swap! existing-robots conj "a")
+("a")
+clj꞉robot-name꞉> 
+@existing-robots
+("a")
+clj꞉robot-name꞉> 
+#'robot-name/existing-robots
+clj꞉robot-name꞉> 
+@existing-robots
+#{}
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name)
+"GJ004"
+clj꞉robot-name꞉> 
+@existing-robots
+#{"GJ004"}
+clj꞉robot-name꞉> 
+(:name {:name "apple"})
+"apple"
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+#'robot-name/robot-name
+clj꞉robot-name꞉> 
+#'robot-name/robot
+clj꞉robot-name꞉> (robot)
+{:name #<Atom@491bc4aa: "ON464">}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r)))
+#atom[TX624 0x352761aa]
+nil
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r)))
+#'robot-name/robot-name
+clj꞉robot-name꞉> 
+UM103
+nil
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (robot-name r))
+"CH303"
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-na))
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+ST504
+; Execution error (ArityException) at robot-name/reset-name (form-init3654999581233849966.clj:28).
+; Wrong number of args (1) passed to: robot-name/gen-name
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+VH027
+; Execution error (ArityException) at robot-name/reset-name (form-init3654999581233849966.clj:28).
+; Wrong number of args (1) passed to: robot-name/reset-name/fn--7631
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+EQ140
+; Execution error (ArityException) at robot-name/reset-name (form-init3654999581233849966.clj:28).
+; Wrong number of args (1) passed to: robot-name/gen-name
+clj꞉robot-name꞉> 
+(macroexpand-1 (let [r (robot)]
+                 (println (robot-name r))
+                 (reset-name r)))
+KH551
+; Execution error (ArityException) at robot-name/reset-name (form-init3654999581233849966.clj:28).
+; Wrong number of args (1) passed to: robot-name/gen-name
+clj꞉robot-name꞉> 
+(macroexpand (let [r (robot)]
+                 (println (robot-name r))
+                 (reset-name r)))
+KA824
+; Execution error (ArityException) at robot-name/reset-name (form-init3654999581233849966.clj:28).
+; Wrong number of args (1) passed to: robot-name/gen-name
+clj꞉robot-name꞉> 
+(macroexpand `(let [r (robot)]
+                 (println (robot-name r))
+                 (reset-name r)))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:562:1).
+; robot-name/r - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/r - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+(macroexpand-1 `(let [r (robot)]
+                 (println (robot-name r))
+                 (reset-name r)))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:571:1).
+; robot-name/r - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/r - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+(macroexpand
+ `(let [r (robot)]
+                 (println (robot-name r))
+                 (reset-name r)))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:580:1).
+; robot-name/r - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/r - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(macroexpand-1 `(let [r (robot)]
+                 (println (robot-name r))
+                 (reset-name r)))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:592:1).
+; robot-name/r - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+robot-name/r - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+robot-name/r - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+TY049
+{:name #<Atom@5dbfa5cb: "QJ147">}
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+nil
+SE944
+(SE944)
+{:name #<Atom@40900496: "XA775">}
+clj꞉robot-name꞉> 
+(disj '(\a) \a)
+; Execution error (ClassCastException) at robot-name/eval7657 (form-init3654999581233849966.clj:617).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IPersistentSet
+clj꞉robot-name꞉> 
+(disj #{\a} \a)
+#{}
+clj꞉robot-name꞉> 
+@existing-robots
+#{"ST504" "KA824" "QJ147" "VH027" "EQ140" "ON464" "TY049" "CH303" "KH551" "GJ004" "SE944" "TX624" "XA775" "UM103"}
+clj꞉robot-name꞉> 
+#'robot-name/existing-robots
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:11:8).
+; Unable to resolve symbol: conatin? in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:11:8).
+; Unable to resolve symbol: conatin? in this context
+clj꞉robot-name꞉> 
+; Syntax error compiling at (robot_name.clj:11:8).
+; Unable to resolve symbol: conatin? in this context
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r)))
+JG157
+nil
+clj꞉robot-name꞉> 
+@existing-robots
+#{"JG157"}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+VP866
+{:name #<Atom@1683c20b: #{"JG157"}>}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+DS142
+{:name #<Atom@2f87307: #{"JG157"}>}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+IP474
+{:name #<Atom@415cc3b2: #{"JG157"}>}
+clj꞉robot-name꞉> 
+@existing-robots
+#{"JG157"}
+clj꞉robot-name꞉> 
+(gen-name "JG157")
+#{}
+clj꞉robot-name꞉> 
+(gen-name "JG157")
+"YR792"
+clj꞉robot-name꞉> 
+#'robot-name/gen-name
+clj꞉robot-name꞉> 
+(gen-name "JG157")
+"QY982"
+clj꞉robot-name꞉> 
+(gen-name "JG157")
+"ZW049"
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+AN664
+{:name #<Atom@6993bd1f: "TB570">}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+DE743
+{:name #<Atom@6c4ececb: "HL637">}
+clj꞉robot-name꞉> 
+@existing-robots
+#{"ZW049" "TB570" "HL637" "QY982" "YR792"}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+OZ457
+{:name #<Atom@5a30d928: "DG999">}
+clj꞉robot-name꞉> 
+@existing-robots
+#{"ZW049" "TB570" "HL637" "QY982" "DG999" "YR792"}
+clj꞉robot-name꞉> 
+(gen-name "ZW049")
+"HH912"
+clj꞉robot-name꞉> 
+@existing-robots
+#{"HH912" "TB570" "HL637" "QY982" "DG999" "YR792"}
+clj꞉robot-name꞉> 
+(disj #{\a} \b)
+#{\a}
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+LL103
+; Execution error (ArityException) at robot-name/reset-name (form-init3654999581233849966.clj:28).
+; Wrong number of args (0) passed to: robot-name/robot-name
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+OF817
+{:name #<Atom@46c2fd75: "EV168">}
+clj꞉robot-name꞉> 
+#'robot-name/reset-name
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+ZA671
+{:name #<Atom@5c056180: "RD486">}
+clj꞉robot-name꞉> 
+@existing-robots
+#{"RD486" "HH912" "TB570" "HL637" "LL103" "QY982" "DG999" "YR792" "EV168"}
+clj꞉robot-name꞉> 
+#'robot-name/existing-robots
+clj꞉robot-name꞉> 
+@existing-robots
+#{}
+clj꞉robot-name꞉> 
+(let [r (robot)]
+  (println (robot-name r))
+  (reset-name r))
+QS942
+{:name #<Atom@42f16e8d: "VG765">}
+clj꞉robot-name꞉> 
+@existing-robots
+#{"VG765"}
+clj꞉robot-name꞉> 

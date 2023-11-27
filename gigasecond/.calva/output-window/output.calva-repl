@@ -1,0 +1,70 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Aborting connect, error determining connect sequence.
+2043 12 27
+nil
+clj꞉gigasecond-test꞉> 
+2043 12 27
+nil
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+clj꞉gigasecond-test꞉> 
+
+clj꞉gigasecond-test꞉> 
+(+ 1 1)
+clj꞉gigasecond-test꞉> 
+2043 12 27
+nil
+clj꞉gigasecond-test꞉> 
+2043 12 27
+nil
+clj꞉gigasecond-test꞉> 
+(+ 1 1)
+2043 12 27
+nil
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+2
+clj꞉gigasecond-test꞉> 
+86400
+clj꞉gigasecond꞉> 
+; Execution error (ClassCastException) at gigasecond/eval7900 (form-init4771296952018497739.clj:27).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉gigasecond꞉> 
+; Execution error (ClassCastException) at gigasecond/eval7902 (form-init4771296952018497739.clj:27).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉gigasecond꞉> 
+86400
+clj꞉gigasecond꞉> 
+(dec 312500/27)
+clj꞉gigasecond꞉> 
+312473/27
+clj꞉gigasecond꞉> 
+#'gigasecond/days-in-gigasec
+clj꞉gigasecond꞉> 
+(int 312500/27)
+clj꞉gigasecond꞉> 
+11574
+clj꞉gigasecond꞉> 
+#'gigasecond/from
+clj꞉gigasecond꞉> 

@@ -1,0 +1,4 @@
+(map-indexed hash-map '(10 2))
+let [[k v] (map-indexed hash-map '(10 2))]
+(let [[k v] (map-indexed hash-map '(10 2))] [k v])
+quit;

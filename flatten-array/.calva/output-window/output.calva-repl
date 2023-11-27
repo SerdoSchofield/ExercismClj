@@ -1,0 +1,369 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:11:18).
+; Unable to resolve symbol: conj in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:11:18).
+; Unable to resolve symbol: conj in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+(ns user)
+nil
+clj꞉user꞉> 
+; Syntax error compiling at (flatten_array.clj:3:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:11:18).
+; Unable to resolve symbol: conj in this context
+clj꞉flatten-array꞉> 
+(defn x [] 1)
+; Syntax error compiling at (output.calva-repl:60:1).
+; Unable to resolve symbol: defn in this context
+clj꞉flatten-array꞉> 
+(ns user)
+nil
+clj꞉user꞉> 
+(defn x [] 1)
+#'user/x
+clj꞉user꞉> 
+x
+#function[user/x]
+clj꞉user꞉> 
+(x)
+1
+clj꞉user꞉> 
+nil
+clj꞉flatten-array꞉> 
+(defn x [] 1)
+#'flatten-array/x
+clj꞉flatten-array꞉> 
+#'flatten-array/flatten
+; WARNING: flatten already refers to: #'clojure.core/flatten in namespace: flatten-array, being replaced by: #'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] [6]])
+(1 5 2 3 4 5 6)
+clj꞉flatten-array꞉> 
+(seq '(:a :b))
+(:a :b)
+clj꞉flatten-array꞉> 
+[]
+[]
+clj꞉flatten-array꞉> 
+(make-array :a :b)
+; Execution error (ClassCastException) at flatten-array/eval7428 (form-init6513222175631808485.clj:93).
+; clojure.lang.Keyword cannot be cast to java.lang.Class
+clj꞉flatten-array꞉> 
+(make-array '(:a :b))
+; Execution error (ArityException) at flatten-array/eval7430 (form-init6513222175631808485.clj:97).
+; Wrong number of args (1) passed to: clojure.core/make-array
+clj꞉flatten-array꞉> 
+(vec '(:a :b))
+[:a :b]
+clj꞉flatten-array꞉> 
+#'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] [6]])
+[1 2 3 4 5 5 6]
+clj꞉flatten-array꞉> 
+(filter [1 nil 2] (nil?))
+; Syntax error (ArityException) compiling nil? at (output.calva-repl:109:19).
+; Wrong number of args (0) passed to: clojure.core/nil?--inliner--5429
+clj꞉flatten-array꞉> 
+(filter [1 nil 2]  nil?)
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:553).
+; Don't know how to create ISeq from: clojure.core$nil_QMARK_
+clj꞉flatten-array꞉> 
+(filter some? [1 2 nil])
+(1 2)
+clj꞉flatten-array꞉> 
+#'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] nil [6]])
+; Execution error at flatten-array/flatten (form-init6513222175631808485.clj:7).
+; Unable to convert: class clojure.core$filter$fn__5874 to Object[]
+clj꞉flatten-array꞉> 
+#'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] nil [6]])
+[1 2 3 4 5 5 6]
+clj꞉flatten-array꞉> 
+#'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(ns user)
+nil
+clj꞉user꞉> 
+(source flatten)
+; Syntax error compiling at (output.calva-repl:136:1).
+; Unable to resolve symbol: source in this context
+clj꞉user꞉> 
+(doc flatten)
+; Syntax error compiling at (output.calva-repl:140:1).
+; Unable to resolve symbol: doc in this context
+clj꞉user꞉> 
+(use user)
+; Syntax error compiling at (output.calva-repl:144:1).
+; Unable to resolve symbol: user in this context
+clj꞉user꞉> 
+(ns user)
+nil
+clj꞉user꞉> 
+(remove-ns flatten-array
+           )
+; Syntax error compiling at (output.calva-repl:151:1).
+; Unable to resolve symbol: flatten-array in this context
+clj꞉user꞉> 
+(remove-method flatten)
+; Execution error (ArityException) at user/eval7473 (form-init6513222175631808485.clj:156).
+; Wrong number of args (1) passed to: clojure.core/remove-method
+clj꞉user꞉> 
+(flatten)
+; Execution error (ArityException) at user/eval7475 (form-init6513222175631808485.clj:160).
+; Wrong number of args (0) passed to: clojure.core/flatten
+clj꞉user꞉> 
+(flatten [1 [2 3 [4 5] 5] nil [6]])
+(1 2 3 4 5 5 nil 6)
+clj꞉user꞉> 
+(source flatten)
+; Syntax error compiling at (output.calva-repl:167:1).
+; Unable to resolve symbol: source in this context
+clj꞉user꞉> 
+(doc flatten)
+; Syntax error compiling at (output.calva-repl:171:1).
+; Unable to resolve symbol: doc in this context
+clj꞉user꞉> 
+(ns clojure.core)
+nil
+clj꞉clojure.core꞉> 
+(source flatten)
+; Syntax error compiling at (output.calva-repl:178:1).
+; Unable to resolve symbol: source in this context
+clj꞉clojure.core꞉> 
+(clojure.core/source flatten)
+; Syntax error compiling at (output.calva-repl:182:1).
+; No such var: clojure.core/source
+clj꞉clojure.core꞉> 
+(ns clojure.repl
+  )
+nil
+clj꞉clojure.repl꞉> 
+(source flatten)
+(defn flatten
+  "Takes any nested combination of sequential things (lists, vectors,
+  etc.) and returns their contents as a single, flat lazy sequence.
+  (flatten nil) returns an empty sequence."
+  {:added "1.2"
+   :static true}
+  [x]
+  (filter (complement sequential?)
+          (rest (tree-seq sequential? seq x))))
+nil
+clj꞉clojure.repl꞉> 
+(tree-seq sequential? seq [1 [2 3] 5])
+([1 [2 3] 5] 1 [2 3] 2 3 5)
+clj꞉clojure.repl꞉> 
+(first (tree-seq sequential? seq [1 [2 3] 5]))
+[1 [2 3] 5]
+clj꞉clojure.repl꞉> 
+(second (tree-seq sequential? seq [1 [2 3] 5]))
+1
+clj꞉clojure.repl꞉> 
+(third (tree-seq sequential? seq [1 [2 3] 5]))
+; Syntax error compiling at (output.calva-repl:211:1).
+; Unable to resolve symbol: third in this context
+clj꞉clojure.repl꞉> 
+(last (tree-seq sequential? seq [1 [2 3] 5]))
+5
+clj꞉clojure.repl꞉> 
+(first (next (tree-seq sequential? seq [1 [2 3] 5])))
+1
+clj꞉clojure.repl꞉> 
+(second (next (tree-seq sequential? seq [1 [2 3] 5])))
+[2 3]
+clj꞉clojure.repl꞉> 
+(rest (tree-seq sequential? seq [1 [2 3] 4]))
+(1 [2 3] 2 3 4)
+clj꞉clojure.repl꞉> 
+(tree-seq sequential? seq [1 [2 3] 4])
+([1 [2 3] 4] 1 [2 3] 2 3 4)
+clj꞉clojure.repl꞉> 
+(tree-seq sequential? seq [1 [2 3] 4])
+([1 [2 3] 4] 1 [2 3] 2 3 4)
+clj꞉clojure.repl꞉> 
+(filter sequential? (rest (tree-seq sequential? seq [1 [2 3] 4])))
+([2 3])
+clj꞉clojure.repl꞉> 
+(filter (complement sequential?) (rest (tree-seq sequential? seq [1 [2 3] 4])))
+(1 2 3 4)
+clj꞉clojure.repl꞉> 
+#'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(ns flatten-array)
+nil
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] nil [6]])
+(1 2 3 4 5 5 nil 6)
+clj꞉flatten-array꞉> 
+#'flatten-array/flatten
+; WARNING: flatten already refers to: #'clojure.core/flatten in namespace: flatten-array, being replaced by: #'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] nil [6]])
+; Execution error (NullPointerException) at flatten-array/flatten (form-init6513222175631808485.clj:5).
+; null
+clj꞉flatten-array꞉> 
+(tree-seq nil?)
+#'flatten-array/flatten
+clj꞉flatten-array꞉> 
+(flatten [1 [2 3 [4 5] 5] nil [6]])
+()
+clj꞉flatten-array꞉> 
+(tree-seq nil? seq [1 [2 3] nil 5])
+([1 [2 3] nil 5])
+clj꞉flatten-array꞉> 
+(source tree-seq)
+; Syntax error compiling at (output.calva-repl:263:1).
+; Unable to resolve symbol: source in this context
+clj꞉flatten-array꞉> 
+(ns clojure.repl)
+nil
+clj꞉clojure.repl꞉> 
+(source tree-seq)
+(defn tree-seq
+  "Returns a lazy sequence of the nodes in a tree, via a depth-first walk.
+   branch? must be a fn of one arg that returns true if passed a node
+   that can have children (but may not).  children must be a fn of one
+   arg that returns a sequence of the children. Will only be called on
+   nodes for which branch? returns true. Root is the root node of the
+  tree."
+  {:added "1.0"
+   :static true}
+   [branch? children root]
+   (let [walk (fn walk [node]
+                (lazy-seq
+                 (cons node
+                  (when (branch? node)
+                    (mapcat walk (children node))))))]
+     (walk root)))
+nil
+clj꞉clojure.repl꞉> 
+; Syntax error compiling at (flatten_array.clj:5:17).
+; Unable to resolve symbol: arr in this context
+clj꞉flatten-array꞉> 
+([1 2 [3 4] 5])
+clj꞉flatten-array꞉> 
+([1 2 [3 4] 5])
+clj꞉flatten-array꞉> 
+([1 2 [3 4] 5] 1 2 [3 4] 3 4 5)
+clj꞉flatten-array꞉> 
+([1 2 [3 4] 5])
+clj꞉flatten-array꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:553).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉flatten-array꞉> 
+#function[clojure.core/tree-seq]
+clj꞉flatten-array꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:553).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉flatten-array꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:553).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉flatten-array꞉> 
+([1 2 [4 3] 5] 1 2 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+([1 2 [4 3] 5] 1 2 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+; Error printing return value (ClassCastException) at clojure.lang.APersistentVector/compareTo (APersistentVector.java:432).
+; java.lang.Long cannot be cast to clojure.lang.IPersistentVector
+clj꞉flatten-array꞉> 
+([1 2 [4 3] 5] 1 2 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+([1 2 [4 3] 5] 1 2 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+(some? [
+        
+])
+[]
+clj꞉flatten-array꞉> 
+(some? 3)
+3
+clj꞉flatten-array꞉> 
+(some? [3])
+3
+clj꞉flatten-array꞉> 
+(distinct? [3 3 [5 6 3] ])
+true
+clj꞉flatten-array꞉> 
+true
+clj꞉flatten-array꞉> 
+(distinct [1 [5 6 3]])
+3
+clj꞉flatten-array꞉> 
+1
+clj꞉flatten-array꞉> 
+(seq (distinct? [1 3 [5 6 3] 3]))
+3
+clj꞉flatten-array꞉> 
+(1 [5 6 3])
+clj꞉flatten-array꞉> 
+(1 3 [5 6 3])
+clj꞉flatten-array꞉> 
+; Execution error (IllegalArgumentException) at flatten-array/eval7603 (form-init6513222175631808485.clj:343).
+; Don't know how to create ISeq from: java.lang.Boolean
+clj꞉flatten-array꞉> 
+true
+clj꞉flatten-array꞉> 
+([1 1 2 2 4 [4 3] 5] 1 2 4 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+([1 1 2 2 4 [4 3] 5] 1 2 4 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+([1 1 2 2 4 [4 3] 5])
+clj꞉flatten-array꞉> 
+([1 1 2 2 4 [4 3] 5] 1 2 4 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+([1 1 2 2 4 [4 3] 5] 1 2 4 [4 3] 4 3 5)
+clj꞉flatten-array꞉> 
+; Syntax error compiling at (flatten_array.clj:5:17).
+; Unable to resolve symbol: ᛋᛖᛏ? in this context
+clj꞉flatten-array꞉> 
+([1 1 2 2 4 [4 3] 5])
+clj꞉flatten-array꞉> 

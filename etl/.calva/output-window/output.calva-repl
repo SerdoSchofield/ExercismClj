@@ -1,0 +1,440 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+("A" "E" "I" "O" "U" "L" "N" "R" "S" "T")
+clj꞉etl-test꞉> 
+("Q" "Z")
+clj꞉etl-test꞉> 
+{1 ("A" "E" "I" "O" "U" "L" "N" "R" "S" "T"),
+ 2 ("D" "G"),
+ 3 ("B" "C" "M" "P"),
+ 4 ("F" "H" "V" "W" "Y"),
+ 5 ("K"),
+ 8 ("J" "X"),
+ 10 ("Q" "Z")}
+clj꞉etl-test꞉> 
+(def x {1 ("A" "E" "I" "O" "U" "L" "N" "R" "S" "T"),
+ 2 ("D" "G"),
+ 3 ("B" "C" "M" "P"),
+ 4 ("F" "H" "V" "W" "Y"),
+ 5 ("K"),
+ 8 ("J" "X"),
+ 10 ("Q" "Z")})
+; Syntax error (ClassCastException) compiling at (form-init7054469143824827754.clj:33:11).
+; java.lang.String cannot be cast to clojure.lang.IFn
+clj꞉etl-test꞉> 
+(def x {1 '("A" "E" "I" "O" "U" "L" "N" "R" "S" "T"),
+ 2 '("D" "G"),
+ 3 '("B" "C" "M" "P"),
+ 4 '("F" "H" "V" "W" "Y"),
+ 5 '("K"),
+ 8 '("J" "X"),
+ 10 '("Q" "Z")})
+#'etl/x
+clj꞉etl꞉> 
+x
+{1 ("A" "E" "I" "O" "U" "L" "N" "R" "S" "T"),
+ 2 ("D" "G"),
+ 3 ("B" "C" "M" "P"),
+ 4 ("F" "H" "V" "W" "Y"),
+ 5 ("K"),
+ 8 ("J" "X"),
+ 10 ("Q" "Z")}
+clj꞉etl꞉> 
+(first x)
+[1 ("A" "E" "I" "O" "U" "L" "N" "R" "S" "T")]
+clj꞉etl꞉> 
+(next x)
+([2 ("D" "G")] [3 ("B" "C" "M" "P")] [4 ("F" "H" "V" "W" "Y")] [5 ("K")] [8 ("J" "X")] [10 ("Q" "Z")])
+clj꞉etl꞉> 
+(next (last x))
+(("Q" "Z"))
+clj꞉etl꞉> 
+(last (last x))
+("Q" "Z")
+clj꞉etl꞉> 
+((last x))
+; Execution error (ArityException) at etl/eval7414 (form-init7054469143824827754.clj:73).
+; Wrong number of args (0) passed to: clojure.lang.MapEntry
+clj꞉etl꞉> 
+(last x)
+[10 ("Q" "Z")]
+clj꞉etl꞉> 
+(first [])
+nil
+clj꞉etl꞉> 
+(empty? [])
+true
+clj꞉etl꞉> 
+(empty? nil)
+true
+clj꞉etl꞉> 
+(let [(key vals) [:k :v]]
+  (println key)
+  (println vals))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:89:1).
+; (key vals) - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+(key vals) - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+(key vals) - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+(key vals) - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉etl꞉> 
+(let ['(key vals) [:k :v]]
+  (println key)
+  (println vals))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:98:1).
+; (quote (key vals)) - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+(quote (key vals)) - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+(quote (key vals)) - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+(quote (key vals)) - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉etl꞉> 
+(let [[key] vals [:k :v]]
+  (println key)
+  (println vals))
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:107:1).
+; [[key] vals [:k :v]] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
+clj꞉etl꞉> 
+(let [[key vals] [:k :v]]
+  (println key)
+  (println vals))
+:k
+:v
+nil
+clj꞉etl꞉> 
+x
+{1 ("A" "E" "I" "O" "U" "L" "N" "R" "S" "T"),
+ 2 ("D" "G"),
+ 3 ("B" "C" "M" "P"),
+ 4 ("F" "H" "V" "W" "Y"),
+ 5 ("K"),
+ 8 ("J" "X"),
+ 10 ("Q" "Z")}
+clj꞉etl꞉> 
+(let [[:key :val] x]
+  :key)
+; Syntax error macroexpanding clojure.core/let at (output.calva-repl:129:1).
+; [:key :val] - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+(:key :val) - failed: Extra input at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+[:key :val] - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+[:key :val] - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉etl꞉> (assoc {1 [:a]} :b)
+; Execution error (ArityException) at etl/eval7429 (form-init7054469143824827754.clj:136).
+; Wrong number of args (2) passed to: clojure.core/assoc--5401
+clj꞉etl꞉> 
+(assoc {1 [:a]} 1 :b)
+{1 :b}
+clj꞉etl꞉> 
+(assoc {1 [:a]} 1 :b)
+; Syntax error (IllegalArgumentException) compiling recur at (etl.clj:9:9).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉etl꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (etl.clj:9:9).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉etl꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+; Syntax error compiling at (etl_test.clj:17:1).
+; Unable to resolve symbol: deftest in this context
+clj꞉etl-test꞉> 
+{"T" 1,
+ "K" 5,
+ "Q" 10,
+ "L" 1,
+ "G" 2,
+ "J" 8,
+ "M" 3,
+ "S" 1,
+ "Y" 4,
+ "Z" 10,
+ "H" 4,
+ "E" 1,
+ "R" 1,
+ "C" 3,
+ "F" 4,
+ "B" 3,
+ "P" 3,
+ "V" 4,
+ "U" 1,
+ "O" 1,
+ "X" 8,
+ "N" 1,
+ "A" 1,
+ "I" 1,
+ "W" 4,
+ "D" 2}
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+{"d" 2,
+ "n" 1,
+ "z" 10,
+ "w" 4,
+ "s" 1,
+ "f" 4,
+ "e" 1,
+ "q" 10,
+ "p" 3,
+ "j" 8,
+ "x" 8,
+ "v" 4,
+ "a" 1,
+ "t" 1,
+ "i" 1,
+ "k" 5,
+ "b" 3,
+ "r" 1,
+ "y" 4,
+ "g" 2,
+ "l" 1,
+ "u" 1,
+ "h" 4,
+ "m" 3,
+ "o" 1,
+ "c" 3}
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+(["a" 1]
+ ["b" 3]
+ ["c" 3]
+ ["d" 2]
+ ["e" 1]
+ ["f" 4]
+ ["g" 2]
+ ["h" 4]
+ ["i" 1]
+ ["j" 8]
+ ["k" 5]
+ ["l" 1]
+ ["m" 3]
+ ["n" 1]
+ ["o" 1]
+ ["p" 3]
+ ["q" 10]
+ ["r" 1]
+ ["s" 1]
+ ["t" 1]
+ ["u" 1]
+ ["v" 4]
+ ["w" 4]
+ ["x" 8]
+ ["y" 4]
+ ["z" 10])
+clj꞉etl-test꞉> 
+(flatten '(["y" 4]["z" 10]))
+("y" 4 "z" 10)
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+("a"
+ 1
+ "b"
+ 3
+ "c"
+ 3
+ "d"
+ 2
+ "e"
+ 1
+ "f"
+ 4
+ "g"
+ 2
+ "h"
+ 4
+ "i"
+ 1
+ "j"
+ 8
+ "k"
+ 5
+ "l"
+ 1
+ "m"
+ 3
+ "n"
+ 1
+ "o"
+ 1
+ "p"
+ 3
+ "q"
+ 10
+ "r"
+ 1
+ "s"
+ 1
+ "t"
+ 1
+ "u"
+ 1
+ "v"
+ 4
+ "w"
+ 4
+ "x"
+ 8
+ "y"
+ 4
+ ...)
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+(assoc {} "a" 1)
+{"a" 1}
+clj꞉etl꞉> 
+(assoc (assoc {} "a" 1) "b" 2)
+{"a" 1, "b" 2}
+clj꞉etl꞉> 
+(["a" 1]
+ ["b" 3]
+ ["c" 3]
+ ["d" 2]
+ ["e" 1]
+ ["f" 4]
+ ["g" 2]
+ ["h" 4]
+ ["i" 1]
+ ["j" 8]
+ ["k" 5]
+ ["l" 1]
+ ["m" 3]
+ ["n" 1]
+ ["o" 1]
+ ["p" 3]
+ ["q" 10]
+ ["r" 1]
+ ["s" 1]
+ ["t" 1]
+ ["u" 1]
+ ["v" 4]
+ ["w" 4]
+ ["x" 8]
+ ["y" 4]
+ ["z" 10])
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+(["a" 1]
+ ["b" 3]
+ ["c" 3]
+ ["d" 2]
+ ["e" 1]
+ ["f" 4]
+ ["g" 2]
+ ["h" 4]
+ ["i" 1]
+ ["j" 8]
+ ["k" 5]
+ ["l" 1]
+ ["m" 3]
+ ["n" 1]
+ ["o" 1]
+ ["p" 3]
+ ["q" 10]
+ ["r" 1]
+ ["s" 1]
+ ["t" 1]
+ ["u" 1]
+ ["v" 4]
+ ["w" 4]
+ ["x" 8]
+ ["y" 4]
+ ["z" 10])
+clj꞉etl-test꞉> 
+(lower "A")
+; Syntax error compiling at (output.calva-repl:361:1).
+; Unable to resolve symbol: lower in this context
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+{}
+{n 1, s 1, e 1, a 1, t 1, i 1, r 1, l 1, u 1, o 1}
+{d 2, n 1, s 1, e 1, a 1, t 1, i 1, r 1, g 2, l 1, u 1, o 1}
+{d 2, n 1, s 1, e 1, p 3, a 1, t 1, i 1, b 3, r 1, g 2, l 1, u 1, m 3, o 1, c 3}
+{d 2, n 1, w 4, s 1, f 4, e 1, p 3, v 4, a 1, t 1, i 1, b 3, r 1, y 4, g 2, l 1, u 1, h 4, m 3, o 1, c 3}
+{d 2, n 1, w 4, s 1, f 4, e 1, p 3, v 4, a 1, t 1, i 1, k 5, b 3, r 1, y 4, g 2, l 1, u 1, h 4, m 3, o 1, c 3}
+{d 2, n 1, w 4, s 1, f 4, e 1, p 3, j 8, x 8, v 4, a 1, t 1, i 1, k 5, b 3, r 1, y 4, g 2, l 1, u 1, h 4, m 3, o 1, c 3}
+{d 2, n 1, z 10, w 4, s 1, f 4, e 1, q 10, p 3, j 8, x 8, v 4, a 1, t 1, i 1, k 5, b 3, r 1, y 4, g 2, l 1, u 1, h 4, m 3, o 1, c 3}
+(["a" 1]
+ ["b" 3]
+ ["c" 3]
+ ["d" 2]
+ ["e" 1]
+ ["f" 4]
+ ["g" 2]
+ ["h" 4]
+ ["i" 1]
+ ["j" 8]
+ ["k" 5]
+ ["l" 1]
+ ["m" 3]
+ ["n" 1]
+ ["o" 1]
+ ["p" 3]
+ ["q" 10]
+ ["r" 1]
+ ["s" 1]
+ ["t" 1]
+ ["u" 1]
+ ["v" 4]
+ ["w" 4]
+ ["x" 8]
+ ["y" 4]
+ ["z" 10])
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+([a 1] [b 3] [c 3] [d 2] [e 1] [f 4] [g 2] [h 4] [i 1] [j 8] [k 5] [l 1] [m 3] [n 1] [o 1] [p 3] [q 10] [r 1] [s 1] [t 1] [u 1] [v 4] [w 4] [x 8] [y 4] [z 10])
+nil
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+{d 2, n 1, z 10, w 4, s 1, f 4, e 1, q 10, p 3, j 8, x 8, v 4, a 1, t 1, i 1, k 5, b 3, r 1, y 4, g 2, l 1, u 1, h 4, m 3, o 1, c 3}
+nil
+clj꞉etl-test꞉> 
+#'etl/transform
+clj꞉etl꞉> 
+{"d" 2,
+ "n" 1,
+ "z" 10,
+ "w" 4,
+ "s" 1,
+ "f" 4,
+ "e" 1,
+ "q" 10,
+ "p" 3,
+ "j" 8,
+ "x" 8,
+ "v" 4,
+ "a" 1,
+ "t" 1,
+ "i" 1,
+ "k" 5,
+ "b" 3,
+ "r" 1,
+ "y" 4,
+ "g" 2,
+ "l" 1,
+ "u" 1,
+ "h" 4,
+ "m" 3,
+ "o" 1,
+ "c" 3}
+clj꞉etl-test꞉> 

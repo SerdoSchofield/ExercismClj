@@ -1,0 +1,240 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉> 
+#'space-age/secs-per-year
+clj꞉space-age꞉> 
+525600
+clj꞉space-age꞉> 
+#'space-age/on-earth
+clj꞉space-age꞉> 
+(on-earth 31241561623456)
+976298800733/16425
+clj꞉space-age꞉> 
+(int (on-earth 31241561623456))
+59439805
+clj꞉space-age꞉> 
+(int (on-earth 31241566))
+59
+clj꞉space-age꞉> 
+(int (on-earth 312416))
+0
+clj꞉space-age꞉> 
+(int (on-earth 312416))
+#'space-age/on-mercury
+clj꞉space-age꞉> 
+(int (on-earth 31241566))
+59
+clj꞉space-age꞉> 
+(int (on-mercury 31241566))
+14
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age.clj:30:16).
+; Unable to resolve symbol: s in this context
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age.clj:26:16).
+; Unable to resolve symbol: s in this context
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age.clj:22:16).
+; Unable to resolve symbol: s in this context
+clj꞉space-age꞉> 
+#'space-age/on-earth
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age.clj:18:16).
+; Unable to resolve symbol: s in this context
+clj꞉space-age꞉> 
+#'space-age/on-uranus
+clj꞉space-age꞉> 
+#'space-age/on-neptune
+clj꞉space-age꞉> 
+#'space-age/on-uranus
+clj꞉space-age꞉> 
+(int (on-mercury 31241566))
+14
+clj꞉space-age꞉> 
+(int (on-venus 31241566))
+; Syntax error compiling at (output.calva-repl:71:6).
+; Unable to resolve symbol: on-venus in this context
+clj꞉space-age꞉> 
+#'space-age/on-venus
+clj꞉space-age꞉> 
+#'space-age/on-earth
+clj꞉space-age꞉> 
+#'space-age/on-mars
+clj꞉space-age꞉> 
+#'space-age/on-jupiter
+clj꞉space-age꞉> 
+#'space-age/on-saturn
+clj꞉space-age꞉> 
+#'space-age/on-neptune
+clj꞉space-age꞉> 
+#'space-age/on-neptune
+clj꞉space-age꞉> 
+#'space-age/on-uranus
+clj꞉space-age꞉> 
+(int (on-venus 31241566))
+36
+clj꞉space-age꞉> 
+(int (on-mars 31241566))
+110
+clj꞉space-age꞉> 
+(on-mars 31241566)
+110.9681322
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age_test.clj:7:22).
+; Unable to resolve symbol: expected in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:8:22).
+; Unable to resolve symbol: actual in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:8:22).
+; Unable to resolve symbol: actual in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:7:22).
+; Unable to resolve symbol: expected in this context
+clj꞉space-age-test꞉> 
+1902
+clj꞉space-age-test꞉> 
+1902
+clj꞉space-age-test꞉> 
+1902
+clj꞉space-age-test꞉> 
+secs-per-year
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Unable to resolve symbol: secs-per-year in this context
+clj꞉space-age-test꞉> 
+#'space-age/secs-per-year
+clj꞉space-age꞉> 
+secs-per-year
+525600
+clj꞉space-age꞉> 
+(on-mars 31241566)
+110.9681322
+clj꞉space-age꞉> 
+(/ 1000000000 secs-per-year)
+1250000/657
+clj꞉space-age꞉> 
+(int (/ 1000000000 secs-per-year))
+1902
+clj꞉space-age꞉> 
+#'space-age/secs-per-year
+clj꞉space-age꞉> 
+(int (/ 1000000000 secs-per-year))
+31
+clj꞉space-age꞉> 
+31
+clj꞉space-age-test꞉> 
+#'space-age/on-earth
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age_test.clj:10:1).
+; Unable to resolve symbol: deftest in this context
+clj꞉space-age-test꞉> 
+62500/1971
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:11:3).
+; Unable to resolve symbol: rounds-to in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:7:3).
+; Unable to resolve symbol: is in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:7:3).
+; Unable to resolve symbol: is in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:7:3).
+; Unable to resolve symbol: is in this context
+clj꞉space-age-test꞉> 
+62500/1971
+clj꞉space-age-test꞉> 
+(* 100.0 on-earth 1000000000)
+; Syntax error compiling at (output.calva-repl:164:1).
+; Unable to resolve symbol: on-earth in this context
+clj꞉space-age-test꞉> 
+(* 100.0 (on-earth 1000000000))
+; Syntax error compiling at (output.calva-repl:168:10).
+; Unable to resolve symbol: on-earth in this context
+clj꞉space-age-test꞉> 
+(* 100.0 (on-earth 1000000000))
+#'space-age/on-earth
+clj꞉space-age꞉> 
+(* 100.0 on-earth 1000000000)
+; Execution error (ClassCastException) at space-age/eval7476 (form-init6495506718526581935.clj:175).
+; space_age$on_earth cannot be cast to java.lang.Number
+clj꞉space-age꞉> 
+(* 100.0 (on-earth 1000000000))
+3170.979198376459
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age_test.clj:10:1).
+; Unable to resolve symbol: deftest in this context
+clj꞉space-age-test꞉> 
+62500/1971
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:15:22).
+; Unable to resolve symbol: seconds in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:16:23).
+; Unable to resolve symbol: seconds in this context
+clj꞉space-age-test꞉> 
+; Execution error (IllegalStateException) at space-age-test/eval7486 (form-init6495506718526581935.clj:15).
+; Attempting to call unbound fn: #'space-age-test/rounds-to
+clj꞉space-age-test꞉> 
+#'space-age/secs-per-year
+clj꞉space-age꞉> 
+3.15576E7
+clj꞉space-age꞉> 
+(def seconds 8210123456)
+#'space-age/seconds
+clj꞉space-age꞉> 
+; Syntax error compiling at (space_age_test.clj:45:23).
+; Unable to resolve symbol: seconds in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:45:23).
+; Unable to resolve symbol: seconds in this context
+clj꞉space-age-test꞉> 
+; Execution error (IllegalStateException) at space-age-test/eval7494 (form-init6495506718526581935.clj:45).
+; Attempting to call unbound fn: #'space-age-test/rounds-to
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:1:7687).
+; Unable to resolve symbol: seconds in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:43:1).
+; Unable to resolve symbol: deftest in this context
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:43:1).
+; Unable to resolve symbol: deftest in this context
+clj꞉space-age-test꞉> 
+; Syntax error macroexpanding clojure.core/defn at (space_age_test.clj:43:1).
+; let - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+(let [seconds 8210123456] (= 260.16 (space-age/on-earth seconds)) (= 1.58 (space-age/on-neptune seconds))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉space-age-test꞉> 
+false
+clj꞉space-age-test꞉> 
+; Syntax error compiling at (space_age_test.clj:45:15).
+; Unable to resolve symbol: seconds in this context
+clj꞉space-age-test꞉> 
+42872.62281279951
+clj꞉space-age-test꞉> 
+260.1631130377468
+clj꞉space-age-test꞉> 
+8210123456
+clj꞉space-age-test꞉> 
+260.1631130377468
+clj꞉space-age-test꞉> 
+(/ 260.16 164.79)
+1.5787365738212273
+clj꞉space-age-test꞉> 

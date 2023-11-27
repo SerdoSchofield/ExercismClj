@@ -1,0 +1,439 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉> 
+(contains? [1 2 3 4] [1])
+4
+clj꞉user꞉> 
+3
+clj꞉user꞉> 
+true
+clj꞉user꞉> 
+(apply #(contains? [1 2 3 4] %) [1 2 3])
+3
+clj꞉user꞉> 
+#function[user/eval7382/fn--7383]
+clj꞉user꞉> 
+; Syntax error compiling at (output.calva-repl:1:7687).
+; Unable to resolve symbol: recue in this context
+clj꞉user꞉> 
+#function[clojure.core/reduce]
+clj꞉user꞉> 
+; Execution error (ArityException) at user/eval7392 (form-init1113878305092019283.clj:28).
+; Wrong number of args (2) passed to: user/eval7392/fn--7393
+clj꞉user꞉> 
+; Execution error (ArityException) at user/eval7402 (form-init1113878305092019283.clj:28).
+; Wrong number of args (3) passed to: user/eval7402/fn--7403
+clj꞉user꞉> 
+true
+clj꞉user꞉> 
+false
+clj꞉user꞉> 
+(reduce #(contains? [1 2 3] %) [1 2 3 4])
+(true true false false)
+clj꞉user꞉> 
+; Execution error (ArityException) at user/eval7423 (form-init1113878305092019283.clj:48).
+; Wrong number of args (2) passed to: user/eval7423/fn--7424
+clj꞉user꞉> 
+(apply #(contains? [1 2 3] %) [1 2 3 4])
+; Execution error (ArityException) at user/eval7433 (form-init1113878305092019283.clj:54).
+; Wrong number of args (4) passed to: user/eval7433/fn--7434
+clj꞉user꞉> 
+(map #(contains? [1 2 3] %) [1 2 3 4])
+(true true false false)
+clj꞉user꞉> 
+(contains? [1 2 3] 3)
+3
+clj꞉user꞉> 
+false
+clj꞉user꞉> 
+(some? [1 2 3] 3)
+; Execution error (ArityException) at user/eval7447 (form-init1113878305092019283.clj:66).
+; Wrong number of args (2) passed to: clojure.core/some?
+clj꞉user꞉> 
+(some [1 2 3] 3)
+; Execution error (IllegalArgumentException) at user/eval7449 (form-init1113878305092019283.clj:70).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉user꞉> 
+(some 3 [1 2 3])
+; Execution error (ClassCastException) at user/eval7451 (form-init1113878305092019283.clj:74).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉user꞉> 
+(some? 3 [1 2 3])
+; Execution error (ArityException) at user/eval7453 (form-init1113878305092019283.clj:78).
+; Wrong number of args (2) passed to: clojure.core/some?
+clj꞉user꞉> 
+(some? #{3} [1 2 3])
+; Execution error (ArityException) at user/eval7455 (form-init1113878305092019283.clj:82).
+; Wrong number of args (2) passed to: clojure.core/some?
+clj꞉user꞉> 
+(some #{3} [1 2 3])
+3
+clj꞉user꞉> 
+(some #{3 2} [1 2 3])
+2
+clj꞉user꞉> 
+(some #{4 } [1 2 3])
+nil
+clj꞉user꞉> 
+(map #(some #{%} [1 2 3]) [1 2 3 4])
+(1 2 3 nil)
+clj꞉user꞉> 
+(map #(some #{%} [1 2 3]) [1 2 2 3 4])
+(1 2 2 3 nil)
+clj꞉user꞉> 
+(some [1 2 3 4] 3)
+3
+clj꞉user꞉> 
+; Execution error (IllegalArgumentException) at user/eval7475 (form-init1113878305092019283.clj:101).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉user꞉> 
+(some 3 [1 2 3 4])
+; Execution error (ClassCastException) at user/eval7477 (form-init1113878305092019283.clj:107).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉user꞉> 
+(some? 3 [1 2 3 4])
+; Execution error (ArityException) at user/eval7479 (form-init1113878305092019283.clj:111).
+; Wrong number of args (2) passed to: clojure.core/some?
+clj꞉user꞉> 
+(some? [1 2 3 4] 3)
+; Execution error (ArityException) at user/eval7481 (form-init1113878305092019283.clj:115).
+; Wrong number of args (2) passed to: clojure.core/some?
+clj꞉user꞉> 
+(contains [1 2 3 4] [2 3])
+; Syntax error compiling at (output.calva-repl:119:1).
+; Unable to resolve symbol: contains in this context
+clj꞉user꞉> 
+(contains? [1 2 3 4] [2 3])
+false
+clj꞉sublist꞉> 
+(apple contains? [1 2 3 4] [2 3])
+; Syntax error compiling at (output.calva-repl:126:1).
+; Unable to resolve symbol: apple in this context
+clj꞉sublist꞉> 
+(apple #(contains? [1 2 3 4]) [2 3])
+; Syntax error compiling at (output.calva-repl:130:1).
+; Unable to resolve symbol: apple in this context
+clj꞉sublist꞉> 
+(apple #(contains? [1 2 3 4] %) [2 3])
+; Syntax error compiling at (output.calva-repl:134:1).
+; Unable to resolve symbol: apple in this context
+clj꞉sublist꞉> 
+(apply #(contains? [1 2 3 4] %) [2 3])
+; Execution error (ArityException) at sublist/eval7504 (form-init1113878305092019283.clj:138).
+; Wrong number of args (2) passed to: sublist/eval7504/fn--7505
+clj꞉sublist꞉> 
+(apply contains? [1 2 3 4] % [2 3])
+; Syntax error compiling at (output.calva-repl:142:1).
+; Unable to resolve symbol: % in this context
+clj꞉sublist꞉> 
+(apply contains? [1 2 3 4] [2 3])
+; Execution error (ArityException) at sublist/eval7509 (form-init1113878305092019283.clj:146).
+; Wrong number of args (1) passed to: clojure.core/apply
+clj꞉sublist꞉> 
+(apply [1 2 3 4])
+; Execution error (ArityException) at sublist/eval7511 (form-init1113878305092019283.clj:146).
+; Wrong number of args (2) passed to: clojure.lang.PersistentVector
+clj꞉sublist꞉> 
+; Execution error (ArityException) at sublist/eval7513 (form-init1113878305092019283.clj:146).
+; Wrong number of args (3) passed to: clojure.core/contains?
+clj꞉sublist꞉> 
+(if-let [x (some #{2} [1 2 3])]
+  x)
+2
+clj꞉sublist꞉> 
+(if-let [x (some #{2} [1 4 3])]
+  x)
+nil
+clj꞉sublist꞉> 
+(if-let [x (some #{2} [1 4 3])]
+  (println "hello"))
+nil
+clj꞉sublist꞉> 
+(if-let [x (some #{2} [1 2 3])]
+  (println "hello"))
+hello
+nil
+clj꞉sublist꞉> 
+(let [[a & r] [1 2 3]] r)
+1
+clj꞉sublist꞉> 
+(let [[a r] [1 2 3]] r)
+2
+clj꞉sublist꞉> 
+1
+clj꞉sublist꞉> 
+(2 3)
+clj꞉sublist꞉> 
+(rest [1 2 3])
+(2 3)
+clj꞉sublist꞉> 
+(next [1 2 3])
+(2 3)
+clj꞉sublist꞉> 
+(let [[a & r] []] r)
+nil
+clj꞉sublist꞉> 
+(let [[a & r] []] a)
+nil
+clj꞉sublist꞉> 
+(if nil true false)
+false
+clj꞉sublist꞉> 
+(if 1 true false)
+true
+clj꞉sublist꞉> 
+(if :a true false)
+true
+clj꞉sublist꞉> 
+(if [] true false)
+true
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(some #{1} [1])
+1
+clj꞉sublist꞉> 
+(some #{1} [2])
+nil
+clj꞉sublist꞉> 
+(some #{1 2 3 4} [1 2 3 4])
+1
+clj꞉sublist꞉> 
+(some #{[1 2 3 4]} [1 2 3 4])
+nil
+clj꞉sublist꞉> 
+(apply str [1 2 3 4])
+"1234"
+clj꞉sublist꞉> 
+(rduce str [1 2 3 4])
+; Syntax error compiling at (output.calva-repl:225:1).
+; Unable to resolve symbol: rduce in this context
+clj꞉sublist꞉> 
+(reduce str [1 2 3 4])
+"1234"
+clj꞉sublist꞉> 
+(apply #(str % " ") [1 2 3 4])
+; Execution error (ArityException) at sublist/eval7601 (form-init1113878305092019283.clj:232).
+; Wrong number of args (4) passed to: sublist/eval7601/fn--7602
+clj꞉sublist꞉> 
+(apply #(str % " ") [1 2 3 4])
+; Execution error (ArityException) at sublist/eval7607 (form-init1113878305092019283.clj:236).
+; Wrong number of args (4) passed to: sublist/eval7607/fn--7608
+clj꞉sublist꞉> 
+(apply #(str % \space) [1 2 3 4])
+; Execution error (ArityException) at sublist/eval7616 (form-init1113878305092019283.clj:240).
+; Wrong number of args (4) passed to: sublist/eval7616/fn--7617
+clj꞉sublist꞉> 
+(map #(str % \space) [1 2 3 4])
+("1 " "2 " "3 " "4 ")
+clj꞉sublist꞉> 
+(apply #(str % \space) [1 2 3 4])
+; Execution error (ArityException) at sublist/eval7634 (form-init1113878305092019283.clj:247).
+; Wrong number of args (4) passed to: sublist/eval7634/fn--7635
+clj꞉sublist꞉> 
+(mapcat #(str % \space) [1 2 3 4])
+(\1 \space \2 \space \3 \space \4 \space)
+clj꞉sublist꞉> 
+(mapcat #(str (str % \space)) [1 2 3 4])
+(\1 \space \2 \space \3 \space \4 \space)
+clj꞉sublist꞉> 
+(str (mapcat #(str % \space) [1 2 3 4]))
+"clojure.lang.LazySeq@6a525a77"
+clj꞉sublist꞉> 
+(apply str (mapcat #(str % \space) [1 2 3 4]))
+"1 2 3 4 "
+clj꞉sublist꞉> 
+; Syntax error compiling at (sublist.clj:4:14).
+; Unable to resolve symbol: coll in this context
+clj꞉sublist꞉> 
+#'sublist/stringify
+clj꞉sublist꞉> 
+(stringify [1 2 3 4])
+"1 2 3 4 "
+clj꞉sublist꞉> 
+(contains? "string" "tring")
+; Execution error (IllegalArgumentException) at sublist/eval7690 (form-init1113878305092019283.clj:271).
+; contains? not supported on type: java.lang.String
+clj꞉sublist꞉> 
+(find "string" "tring")
+; Execution error (IllegalArgumentException) at sublist/eval7692 (form-init1113878305092019283.clj:275).
+; find not supported on type: java.lang.String
+clj꞉sublist꞉> 
+(re-find "string" "tring")
+; Execution error (ClassCastException) at sublist/eval7694 (form-init1113878305092019283.clj:279).
+; java.lang.String cannot be cast to java.util.regex.Pattern
+clj꞉sublist꞉> 
+(includes? "string" "tring")
+; Syntax error compiling at (output.calva-repl:283:1).
+; Unable to resolve symbol: includes? in this context
+clj꞉sublist꞉> 
+(clojure.string/includes? "string" "tring")
+true
+clj꞉sublist꞉> 
+(= [1 2 3] [1 2 3])
+true
+clj꞉sublist-test꞉> 
+(= [1 2 3] [1 2 3 5])
+false
+clj꞉sublist-test꞉> 
+(> [1 2 3] [1 2])
+; Execution error (ClassCastException) at sublist-test/eval7713 (form-init1113878305092019283.clj:296).
+; clojure.lang.PersistentVector cannot be cast to java.lang.Number
+clj꞉sublist-test꞉> 
+(> [1 2 3] [1 2])
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 2 3] [1 2])
+; Execution error (IllegalArgumentException) at sublist/classify (form-init1113878305092019283.clj:9).
+; contains? not supported on type: java.lang.String
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 2 3] [1 2])
+:superlist
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+:unequal
+clj꞉sublist꞉> 
+(classify [1 2] [1 2])
+:equal
+clj꞉sublist꞉> 
+(classify [1 2] [1 2 3])
+:sublist
+clj꞉sublist꞉> 
+(.indexOf "string" "tring")
+1
+clj꞉sublist꞉> 
+(.indexOf "string" "ring")
+2
+clj꞉sublist꞉> 
+(.indexOf "string" "zed")
+-1
+clj꞉sublist꞉> 
+(boolean -1)
+true
+clj꞉sublist꞉> 
+(boolean? -1)
+false
+clj꞉sublist꞉> 
+(boolean? 1)
+false
+clj꞉sublist꞉> 
+(boolean
+ ? 1)
+; Syntax error (ArityException) compiling boolean at (output.calva-repl:339:1).
+; Wrong number of args (2) passed to: clojure.core/boolean--inliner--5679
+clj꞉sublist꞉> 
+(if 1 true false)
+true
+clj꞉sublist꞉> 
+(if -1 true false)
+true
+clj꞉sublist꞉> 
+(if -1 true false)
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 2] [1 2 3])
+:superlist
+clj꞉sublist꞉> 
+(classify [1 2] [1 2])
+:unequal
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+:equal
+clj꞉sublist꞉> 
+(.indexof "1 2 3" "1 2")
+; Execution error (IllegalArgumentException) at sublist/eval7756 (form-init1113878305092019283.clj:362).
+; No matching method indexof found taking 1 args for class java.lang.String
+clj꞉sublist꞉> 
+(.indexOf "1 2 3" "1 2")
+0
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+:equal
+clj꞉sublist꞉> 
+(classify [1 2] [1 2])
+:equal
+clj꞉sublist꞉> 
+(.indexOf "1 2" "1 3")
+-1
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 2] [1 2])
+0   0
+:equal
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+-1   -1
+:equal
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+-1 true   -1 true
+:equal
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+-1 true   -1 true
+:equal
+clj꞉sublist꞉> 
+(> 0 -1)
+true
+clj꞉sublist꞉> 
+(>= 0 -1)
+true
+clj꞉sublist꞉> 
+(> 0 -1)
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+-1 true   -1 true
+:equal
+clj꞉sublist꞉> 
+(.indexOf "1 3 " "1 2 ")
+-1
+clj꞉sublist꞉> 
+(.indexOf "1 2 " "1 3 ")
+-1
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 3] [1 2])
+-1 false   -1 false
+:unequal
+clj꞉sublist꞉> 
+(classify [1 3] [1 3 2])
+0 true   -1 false
+:sublist
+clj꞉sublist꞉> 
+(classify [1 3 2] [3 2])
+-1 false   2 true
+:superlist
+clj꞉sublist꞉> 
+#'sublist/classify
+clj꞉sublist꞉> 
+(classify [1 3 2] [3 2])
+:superlist
+clj꞉sublist꞉> 

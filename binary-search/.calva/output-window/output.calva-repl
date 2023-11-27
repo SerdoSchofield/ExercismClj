@@ -1,0 +1,338 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉> 
+((+ 11))
+11
+clj꞉user꞉> 
+#'binary-search/middle
+clj꞉binary-search꞉> 
+#'binary-search-test/short-vector
+clj꞉binary-search-test꞉> 
+3
+clj꞉binary-search-test꞉> 
+(sort [1 4 2])
+(1 2 4)
+clj꞉binary-search-test꞉> 
+(sort [])
+()
+clj꞉binary-search-test꞉> 
+(if-let [x (sort [])] true false)
+true
+clj꞉binary-search-test꞉> 
+(subseq '(1 2 3) 0 2)
+; Execution error (ClassCastException) at binary-search-test/eval7414 (form-init1018216283798956764.clj:39).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.Sorted
+clj꞉binary-search-test꞉> 
+(sublist '(1 2 3) 0 2)
+; Syntax error compiling at (output.calva-repl:43:1).
+; Unable to resolve symbol: sublist in this context
+clj꞉binary-search-test꞉> 
+(subvec '(1 2 3) 0 2)
+; Execution error (ClassCastException) at binary-search-test/eval7417 (form-init1018216283798956764.clj:47).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IPersistentVector
+clj꞉binary-search-test꞉> 
+(subvec (1 2 3) 0 2)
+; Execution error (ClassCastException) at binary-search-test/eval7419 (form-init1018216283798956764.clj:51).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉binary-search-test꞉> 
+(subvec [1 2 3] 0 1)
+[1]
+clj꞉binary-search-test꞉> 
+(subvec [1 2 3] 0 2)
+[1 2]
+clj꞉binary-search-test꞉> 
+(subvec [1 2 3] 2)
+[3]
+clj꞉binary-search-test꞉> 
+(middle [1 2 3])
+; Syntax error compiling at (output.calva-repl:64:1).
+; Unable to resolve symbol: middle in this context
+clj꞉binary-search-test꞉> 
+#'binary-search/middle
+clj꞉binary-search꞉> 
+(middle [1 2 3])
+1
+clj꞉binary-search꞉> 
+(middle [1])
+0
+clj꞉binary-search꞉> 
+(subvec [1] 0)
+[1]
+clj꞉binary-search꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+3
+clj꞉binary-search-test꞉> 
+0
+clj꞉binary-search-test꞉> 
+5
+clj꞉binary-search-test꞉> 
+#'binary-search-test/large-vector
+clj꞉binary-search-test꞉> 
+#'binary-search-test/even-length-vector
+clj꞉binary-search-test꞉> 
+; Execution error (NullPointerException) at binary-search/search-for (form-init1018216283798956764.clj:10).
+; null
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+; Execution error (NullPointerException) at binary-search/search-for (form-init1018216283798956764.clj:12).
+; null
+clj꞉binary-search-test꞉> 
+5
+clj꞉binary-search-test꞉> 
+[1 3 4 6 8 9 11]
+clj꞉binary-search-test꞉> 
+5
+clj꞉binary-search-test꞉> 
+; Execution error (NullPointerException) at binary-search/search-for (form-init1018216283798956764.clj:12).
+; null
+clj꞉binary-search-test꞉> 
+; Execution error (NullPointerException) at binary-search/search-for (form-init1018216283798956764.clj:12).
+; null
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89]
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+nil
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 5 8 13 21 34 55 89] 4 13
+[13 21 34 55 89] 2 34
+[34 55 89] 1 55
+[55 89] 0 55
+nil
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 5 8 13 21 34 55 89] 4 13
+[1 3 5 8] 1 3
+3
+clj꞉binary-search-test꞉> 
+[1 3 4 6 8 9 11] 3 6
+[6 8 9 11] 1 8
+[8 9 11] 1 9
+5
+clj꞉binary-search-test꞉> 
+[4] 0 4
+0
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89] 4 13
+[13 21 34 55 89] 2 34
+[34 55 89] 1 55
+7
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 5 21
+5
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 5 21
+[21 34 55 89 144 233 377] 3 89
+[21 34 55] 1 34
+7
+clj꞉binary-search-test꞉> 
+[0 1 2 3 4 5 6 7 8 9] 4 4
+[4 5 6 7 8 9] 2 6
+[6 7 8 9] 1 7
+7
+clj꞉binary-search-test꞉> 
+[-3 -2 0 1 3 4] 2 0
+[0 1 3 4] 1 1
+[1 3 4] 1 3
+4
+clj꞉binary-search-test꞉> 
+[1 3 4 6 8 9 11] 3 6
+[6 8 9 11] 1 8
+[8 9 11] 1 9
+[9 11] 0 9
+nil
+clj꞉binary-search-test꞉> 
+[-3 -2 0 1 3 4] 2 0
+[0 1 3 4] 1 1
+[1 3 4] 1 3
+4
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 5 21
+[21 34 55 89 144 233 377] 3 89
+[21 34 55] 1 34
+7
+clj꞉binary-search-test꞉> 
+#'binary-search/middle
+clj꞉binary-search꞉> 
+(middle [1 3 4 8])
+2
+clj꞉binary-search꞉> 
+(middle [1 3 4 8 9])
+3
+clj꞉binary-search꞉> 
+#'binary-search/middle
+clj꞉binary-search꞉> 
+(middle [1 3 4 8 9])
+2
+clj꞉binary-search꞉> 
+(middle [1 3 4 8])
+2
+clj꞉binary-search꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+6
+clj꞉binary-search-test꞉> 
+[0 1 2 3 4 5 6 7 8 9] 5 5
+[5 6 7 8 9] 2 7
+7
+clj꞉binary-search-test꞉> 
+[-3 -2 0 1 3 4] 3 1
+[1 3 4] 1 3
+4
+clj꞉binary-search-test꞉> 
+[-3 -2 0 1 3 4] 3 1
+[1 3 4] 1 3
+true
+clj꞉binary-search-test꞉> 
+[0 1 2 3 4 5 6 7 8 9] 5 5
+[5 6 7 8 9] 2 7
+true
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+true
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+[1 3 5 8 13 21] 3 8
+[8 13 21] 1 13
+[13 21] 1 21
+false
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+[1 3 5 8 13 21] 3 8
+[8 13 21] 1 13
+[13 21] 1 21
+1
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+[1 3 5 8 13 21] 3 8
+[8 13 21] 1 13
+[13 21] 1 21
+1 1
+3 2
+6 5
+1
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+[1 3 5 8 13 21] 3 8
+[8 13 21] 1 13
+[13 21] 1 21
+#function[clojure.core/+] 1 1
+#function[clojure.core/+] 3 2
+#function[clojure.core/-] 6 5
+1
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+[1 3 5 8 13 21] 3 8
+[8 13 21] 1 13
+[13 21] 1 21
+#function[clojure.core/+] 1 1
+#function[clojure.core/+] 3 2
+5
+clj꞉binary-search-test꞉> 
+[-3 -2 0 1 3 4] 3 1
+[1 3 4] 1 3
+#function[clojure.core/+] 3 1
+true
+clj꞉binary-search-test꞉> 
+; Syntax error compiling at (binary_search_test.clj:1:7687).
+; Unable to resolve symbol: deftest in this context
+clj꞉binary-search-test꞉> 
+[0 1 2 3 4 5 6 7 8 9] 5 5
+[5 6 7 8 9] 2 7
+#function[clojure.core/+] 5 2
+true
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+true
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89 144 233 377] 6 34
+[1 3 5 8 13 21] 3 8
+[8 13 21] 1 13
+[13 21] 1 21
+#function[clojure.core/+] 1 1
+#function[clojure.core/+] 3 2
+true
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89] 4 13
+[13 21 34 55 89] 2 34
+[34 55 89] 1 55
+#function[clojure.core/+] 2 1
+#function[clojure.core/+] 4 3
+true
+clj꞉binary-search-test꞉> 
+[1 3 5 8 13 21 34 55 89] 4 13
+[1 3 5 8] 2 5
+[1 3] 1 3
+true
+clj꞉binary-search-test꞉> 
+[1 3 4 6 8 9 11] 3 6
+[6 8 9 11] 2 9
+#function[clojure.core/+] 3 2
+true
+clj꞉binary-search-test꞉> 
+[4] 0 4
+true
+clj꞉binary-search-test꞉> 
+true
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 4 6 8 9 11] 3 6
+[6 8 9 11] 2 9
+[9 11] 1 11
+[11] 0 11
+; Execution error (ClassCastException) at binary-search/search-for (form-init1018216283798956764.clj:9).
+; java.lang.String cannot be cast to java.lang.Throwable
+clj꞉binary-search-test꞉> 
+#'binary-search/search-for
+clj꞉binary-search꞉> 
+[1 3 4 6 8 9 11] 3 6
+[6 8 9 11] 2 9
+[9 11] 1 11
+[11] 0 11
+; Execution error at binary-search/search-for (form-init1018216283798956764.clj:9).
+; not found
+clj꞉binary-search-test꞉> 
+; Syntax error compiling at (binary_search_test.clj:39:7).
+; Unable to resolve symbol: thrown-with-msg? in this context
+clj꞉binary-search-test꞉> 
+[-3 -2 0 1 3 4] 3 1
+[1 3 4] 1 3
+#function[clojure.core/+] 3 1
+true
+clj꞉binary-search-test꞉> 
+[0 1 2 3 4 5 6 7 8 9] 5 5
+[5 6 7 8 9] 2 7
+#function[clojure.core/+] 5 2
+true
+clj꞉binary-search-test꞉> 

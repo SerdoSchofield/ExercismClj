@@ -1,0 +1,1 @@
+{"all-your-base-test" ["test-multiple-zeroes" "test-single-decimal-to-binary" "test-leading-zeros" "test-hexadecimal-to-trinary" "test-decimal-to-binary" "test-single-zero" "test-trinary-to-hexadecimal" "test-binary-to-multiple-decimal" "test-single-bit-to-one-decimal" "test-15-bit-integer" "test-binary-to-single-decimal"]}

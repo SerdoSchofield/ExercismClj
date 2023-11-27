@@ -1,0 +1,874 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"0.8.3"] -- update-in :plugins conj [cider/cider-nrepl,"0.26.0"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉user꞉> 
+2
+(bit-shift-left 1 1)
+clj꞉grains꞉> 
+(bit-shift-left 4 1)
+8
+clj꞉grains꞉> 
+(bit-shift-left 5 1)
+()
+clj꞉grains꞉> 
+(bit-shift-left 2 1)
+4
+clj꞉grains꞉> 
+(bit-shift-left 2 6)
+128
+clj꞉grains꞉> 
+(bit-shift-left 2 3)
+16
+clj꞉grains꞉> 
+(bit-shift-left 2 1)
+4
+clj꞉grains꞉> 
+(bit-shift-left 1 1)
+2
+clj꞉grains꞉> 
+(bit-shift-left 1 3)
+8
+clj꞉grains꞉> 
+(bit-shift-left 1 2)
+4
+clj꞉grains꞉> 
+(bit-shift-left 0 2)
+0
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 3)
+4
+clj꞉grains꞉> 
+(square 1)
+1
+clj꞉grains꞉> 
+(square 64)
+-9223372036854775808
+clj꞉grains꞉> 
+(square 63)
+4611686018427387904
+clj꞉grains꞉> 
+(square (dec 64))
+4611686018427387904
+clj꞉grains꞉> 
+(bit-or 4 2)
+6
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+#function[grains/total]
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+#function[grains/total]
+clj꞉grains꞉> 
+#function[grains/total]
+clj꞉grains꞉> 
+(total)
+[]
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+[]
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+-1
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+-1
+clj꞉grains꞉> 
+(square ())
+#'grains/square
+clj꞉grains꞉> 
+(square 63)
+4611686018427387904
+clj꞉grains꞉> 
+(square 64 
+        )
+-9223372036854775808
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64 )
+1
+clj꞉grains꞉> 
+(square 64)
+1
+clj꞉grains꞉> 
+(square 1)
+2
+clj꞉grains꞉> 
+(square 1)
+2
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 1)
+1
+clj꞉grains꞉> 
+(square 2)
+2
+clj꞉grains꞉> 
+(square 3)
+4
+clj꞉grains꞉> 
+(square 64)
+()
+clj꞉grains꞉> 
+(long -9223372036854775808)
+(long -9223372036854775808)
+clj꞉grains꞉> 
+(long (square 64))
+-9223372036854775808
+clj꞉grains꞉> 
+(int-64 (square 64))
+; Syntax error compiling at (output.calva-repl:146:1).
+; Unable to resolve symbol: int-64 in this context
+clj꞉grains꞉> 
+(double (square 64))
+-9.223372036854776E18
+clj꞉grains꞉> 
+(long (square 64))
+(* 2 (square 64))
+clj꞉grains꞉> 
+-9223372036854775808
+; Execution error (ArithmeticException) at grains/eval7468 (form-init6659871610152897453.clj:156).
+; integer overflow
+clj꞉grains꞉> 
+(* 2 (square 63))
+; Execution error (ArithmeticException) at grains/eval7470 (form-init6659871610152897453.clj:160).
+; integer overflow
+clj꞉grains꞉> 
+(* 2 (square 65))
+2
+clj꞉grains꞉> 
+(* 2 (square 64))
+; Execution error (ArithmeticException) at grains/eval7474 (form-init6659871610152897453.clj:167).
+; integer overflow
+clj꞉grains꞉> 
+(* 2 (square 64))
+; Execution error (ArithmeticException) at grains/eval7476 (form-init6659871610152897453.clj:171).
+; integer overflow
+clj꞉grains꞉> 
+(square 65)
+1
+clj꞉grains꞉> 
+(square 66)
+2
+clj꞉grains꞉> 
+(square 64)
+-9223372036854775808
+clj꞉grains꞉> 
+(square 63)
+4611686018427387904
+clj꞉grains꞉> 
+(int 0b000000)
+; Syntax error reading source at (REPL:187:14).
+; Invalid number: 0b000000
+clj꞉grains꞉> 
+(int (\b0000))
+; Syntax error reading source at (REPL:191:13).
+; Unsupported character: \b0000
+clj꞉grains꞉> 
+(int 2r0010)
+2
+clj꞉grains꞉> 
+(int 2r00000010)
+2
+clj꞉grains꞉> 
+(int 2r00000000)
+0
+clj꞉grains꞉> 
+(int 2r10000000)
+128
+clj꞉grains꞉> 
+(int 2r100000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7494 (form-init6659871610152897453.clj:207).
+; Value out of range for int: 576460752303423488
+clj꞉grains꞉> 
+(int 2r10000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7496 (form-init6659871610152897453.clj:211).
+; Value out of range for int: 288230376151711744
+clj꞉grains꞉> 
+(int 2r1000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7498 (form-init6659871610152897453.clj:215).
+; Value out of range for int: 144115188075855872
+clj꞉grains꞉> 
+(int 2r1000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7500 (form-init6659871610152897453.clj:219).
+; Value out of range for int: 144115188075855872
+clj꞉grains꞉> 
+(int 2r100000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7502 (form-init6659871610152897453.clj:223).
+; Value out of range for int: 72057594037927936
+clj꞉grains꞉> 
+(int 2r10000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7504 (form-init6659871610152897453.clj:227).
+; Value out of range for int: 36028797018963968
+clj꞉grains꞉> 
+(int 2r1000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7506 (form-init6659871610152897453.clj:231).
+; Value out of range for int: 18014398509481984
+clj꞉grains꞉> 
+(int 2r100000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7508 (form-init6659871610152897453.clj:235).
+; Value out of range for int: 9007199254740992
+clj꞉grains꞉> 
+(int 2r10000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7510 (form-init6659871610152897453.clj:239).
+; Value out of range for int: 4503599627370496
+clj꞉grains꞉> 
+(int 2r1000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7512 (form-init6659871610152897453.clj:243).
+; Value out of range for int: 2251799813685248
+clj꞉grains꞉> 
+(int 2r100000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7514 (form-init6659871610152897453.clj:247).
+; Value out of range for int: 1125899906842624
+clj꞉grains꞉> 
+(int 2r10000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7516 (form-init6659871610152897453.clj:251).
+; Value out of range for int: 70368744177664
+clj꞉grains꞉> 
+(int 2r1000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7518 (form-init6659871610152897453.clj:255).
+; Value out of range for int: 4398046511104
+clj꞉grains꞉> 
+(int 2r100000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7520 (form-init6659871610152897453.clj:259).
+; Value out of range for int: 274877906944
+clj꞉grains꞉> 
+(int 2r10000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7522 (form-init6659871610152897453.clj:263).
+; Value out of range for int: 17179869184
+clj꞉grains꞉> 
+(int 2r1000000000000000000000000000000)
+1073741824
+clj꞉grains꞉> 
+(int 2r10000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7526 (form-init6659871610152897453.clj:270).
+; Value out of range for int: 2147483648
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000)
+1073741824
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000000000000000000000000000000000)
+1152921504606846976
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7532 (form-init6659871610152897453.clj:280).
+; Value out of range for long: 1329227995784915872903807060280344576
+clj꞉grains꞉> 
+(long 2r100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7534 (form-init6659871610152897453.clj:284).
+; Value out of range for long: 664613997892457936451903530140172288
+clj꞉grains꞉> 
+(long 2r10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7536 (form-init6659871610152897453.clj:288).
+; Value out of range for long: 332306998946228968225951765070086144
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7538 (form-init6659871610152897453.clj:292).
+; Value out of range for long: 166153499473114484112975882535043072
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000000000000000000000000000000000)
+1152921504606846976
+clj꞉grains꞉> 
+(long 2r10000000000000000000000000000000000000000000000000000000000000)
+2305843009213693952
+clj꞉grains꞉> 
+(long 2r100000000000000000000000000000000000000000000000000000000000000)
+4611686018427387904
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7546 (form-init6659871610152897453.clj:305).
+; Value out of range for long: 9223372036854775808
+clj꞉grains꞉> 
+(long 2r100000000000000000000000000000000000000000000000000000000000000)
+4611686018427387904
+clj꞉grains꞉> 
+(long 2r0100000000000000000000000000000000000000000000000000000000000000)
+4611686018427387904
+clj꞉grains꞉> 
+(long 2r1000000000000000000000000000000000000000000000000000000000000000)
+; Execution error (IllegalArgumentException) at grains/eval7552 (form-init6659871610152897453.clj:315).
+; Value out of range for long: 9223372036854775808
+clj꞉grains꞉> 
+2r1000000000000000000000000000000000000000000000000000000000000000
+9223372036854775808N
+clj꞉grains꞉> 
+2r10000000000000000000000000000000000000000000000000000000000000000
+18446744073709551616N
+clj꞉grains꞉> 
+2r1000000000000000000000000000000000000000000000000000000000000000
+9223372036854775808N
+clj꞉grains꞉> 
+2r0100
+4
+clj꞉grains꞉> 
+2r0000000000000000000000000000000000000000000000000000000000000001
+1
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+64
+clj꞉grains꞉> 
+(square 64)
+#'grains/square
+clj꞉grains꞉> 
+2r0000000000000000000000000000000000000000000000000000000000000001
+1
+clj꞉grains꞉> 
+65
+clj꞉grains꞉> 
+; Syntax error (ArityException) compiling bit-shift-left at (grains.clj:4:3).
+; Wrong number of args (1) passed to: clojure.core/bit-shift-left--inliner--5626
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+-9223372036854775808
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+-9223372036854775808N
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+; Execution error (IllegalArgumentException) at grains/square (form-init6659871610152897453.clj:4).
+; bit operation not supported for: class clojure.lang.BigInt
+clj꞉grains꞉> 
+; Syntax error compiling at (grains.clj:4:3).
+; Unable to resolve symbol: unsigned-bit-shift-left in this context
+clj꞉grains꞉> 
+; Syntax error compiling at (grains.clj:4:3).
+; Unable to resolve symbol: unsigned-bit-shift-left in this context
+clj꞉grains꞉> 
+; Syntax error (IllegalArgumentException) compiling . at (grains.clj:4:3).
+; No matching method shiftLeft found taking 2 args for class java.math.BigInteger
+clj꞉grains꞉> 
+; Syntax error (IllegalArgumentException) compiling . at (grains.clj:4:3).
+; No matching method shiftLeft found taking 2 args for class java.math.BigInteger
+clj꞉grains꞉> 
+; Syntax error (IllegalArgumentException) compiling . at (grains.clj:4:3).
+; No matching method shiftLeft found taking 2 args for class java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+; Execution error (IllegalArgumentException) at grains/square (form-init6659871610152897453.clj:4).
+; No matching method shiftLeft found taking 1 args for class clojure.lang.BigInt
+clj꞉grains꞉> 
+; Syntax error compiling at (grains.clj:4:3).
+; Unable to resolve symbol: .shiftLeft in this context
+clj꞉grains꞉> 
+; Syntax error (ArityException) compiling dec at (grains.clj:4:29).
+; Wrong number of args (2) passed to: clojure.core/dec--inliner--5557
+clj꞉grains꞉> 
+; Syntax error compiling at (grains.clj:4:3).
+; Unable to resolve symbol: .shiftLeft in this context
+clj꞉grains꞉> 
+; Syntax error (ArityException) compiling dec at (grains.clj:4:30).
+; Wrong number of args (2) passed to: clojure.core/dec--inliner--5557
+clj꞉grains꞉> 
+; Syntax error compiling at (grains.clj:4:3).
+; Unable to resolve symbol: .shiftLeft in this context
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+; Execution error (IllegalArgumentException) at grains/square (form-init6659871610152897453.clj:4).
+; No matching method shiftLeft found taking 1 args for class clojure.lang.BigInt
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+; Execution error (IllegalArgumentException) at grains/square (form-init6659871610152897453.clj:4).
+; No matching method shiftLeft found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+; Execution error (IllegalArgumentException) at grains/square (form-init6659871610152897453.clj:4).
+; No matching method shiftLeft found taking 1 args for class clojure.lang.BigInt
+clj꞉grains꞉> 
+(shift-left 1 3)
+; Syntax error compiling at (output.calva-repl:423:1).
+; Unable to resolve symbol: shift-left in this context
+clj꞉grains꞉> 
+(BigInteger/shift-left 1 3)
+; Syntax error (IllegalArgumentException) compiling . at (output.calva-repl:427:1).
+; No matching method shift_left found taking 2 args for class java.math.BigInteger
+clj꞉grains꞉> 
+(BigInteger/shiftLeft 1 3)
+; Syntax error (IllegalArgumentException) compiling . at (output.calva-repl:431:1).
+; No matching method shiftLeft found taking 2 args for class java.math.BigInteger
+clj꞉grains꞉> 
+(.shiftLeft 1 3)
+; Execution error (IllegalArgumentException) at grains/eval7586 (form-init6659871610152897453.clj:435).
+; No matching method shiftLeft found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+(.shiftLeft 3)
+; Execution error (IllegalArgumentException) at grains/eval7588 (form-init6659871610152897453.clj:439).
+; No matching field found: shiftLeft for class java.lang.Long
+clj꞉grains꞉> 
+(.shiftLeft (bigint 1))
+; Execution error (IllegalArgumentException) at grains/eval7590 (form-init6659871610152897453.clj:443).
+; No matching field found: shiftLeft for class clojure.lang.BigInt
+clj꞉grains꞉> 
+(.shiftLeft (biginteger 1))
+; Execution error (IllegalArgumentException) at grains/eval7592 (form-init6659871610152897453.clj:447).
+; No matching field found: shiftLeft for class java.math.BigInteger
+clj꞉grains꞉> 
+(.shiftLeft (1))
+; Execution error (ClassCastException) at grains/eval7594 (form-init6659871610152897453.clj:451).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉grains꞉> 
+(.shiftLeft  1)
+; Execution error (IllegalArgumentException) at grains/eval7596 (form-init6659871610152897453.clj:455).
+; No matching field found: shiftLeft for class java.lang.Long
+clj꞉grains꞉> 
+(.shiftLeft 1 2)
+; Execution error (IllegalArgumentException) at grains/eval7598 (form-init6659871610152897453.clj:459).
+; No matching method shiftLeft found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+(.shiftLeft (BigInteger. 1) 2)
+; Execution error (IllegalArgumentException) at grains/eval7600 (form-init6659871610152897453.clj:463).
+; No matching ctor found for class java.math.BigInteger
+clj꞉grains꞉> 
+(.shiftLeft (BigInteger 1) 2)
+; Syntax error compiling at (output.calva-repl:467:13).
+; Expecting var, but BigInteger is mapped to class java.math.BigInteger
+clj꞉grains꞉> 
+(.shiftLeft (biginteger 1) 2)
+4
+clj꞉grains꞉> 
+(.shiftLeft (biginteger 1) 2)
+#'grains/square
+clj꞉grains꞉> 
+(square 64)
+9223372036854775808
+clj꞉grains꞉> 
+(square 65)
+18446744073709551616
+clj꞉grains꞉> 
+(square 66)
+36893488147419103232
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+18446744073709551615N
+clj꞉grains꞉> 
+1
+clj꞉grains-test꞉> 
+; Syntax error compiling at (grains_test.clj:9:7).
+; Unable to resolve symbol: = in this context
+clj꞉grains-test꞉> 
+2
+clj꞉grains-test꞉> 
+4
+clj꞉grains-test꞉> 
+; Syntax error compiling at (grains_test.clj:12:7).
+; Unable to resolve symbol: = in this context
+clj꞉grains-test꞉> 
+4
+clj꞉grains-test꞉> 
+8
+clj꞉grains-test꞉> 
+32768
+clj꞉grains-test꞉> 
+2147483648
+clj꞉grains-test꞉> 
+9223372036854775808
+clj꞉grains-test꞉> 
+18446744073709551615N
+clj꞉grains-test꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; bit operation not supported for: class java.math.BigInteger
+clj꞉grains꞉> 
+(bit-or 3N 4N)
+; Execution error (IllegalArgumentException) at grains/eval7642 (form-init6659871610152897453.clj:521).
+; bit operation not supported for: class clojure.lang.BigInt
+clj꞉grains꞉> 
+(bit-or (biginteger 3) (biginteger 4))
+; Execution error (IllegalArgumentException) at grains/eval7644 (form-init6659871610152897453.clj:525).
+; bit operation not supported for: class java.math.BigInteger
+clj꞉grains꞉> 
+(.or (biginteger 3) (biginteger 4))
+7
+clj꞉grains꞉> 
+(.or 3N 4N)
+; Execution error (IllegalArgumentException) at grains/eval7648 (form-init6659871610152897453.clj:532).
+; No matching method or found taking 1 args for class clojure.lang.BigInt
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+13835058055282163712
+clj꞉grains꞉> 
+9223372036854775808
+clj꞉grains꞉> 
+4611686018427387904
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+13835058055282163712
+clj꞉grains꞉> 
+4611686018427387904
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+85070591730234615875067023894796828672
+clj꞉grains꞉> 
+85070591730234615865843651857942052864
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+85070591730234615875067023894796828672
+clj꞉grains꞉> 
+85070591730234615865843651857942052864
+clj꞉grains꞉> 
+(bit-and 5 0)
+0
+clj꞉grains꞉> 
+(bit-xand 5 0)
+; Syntax error compiling at (output.calva-repl:568:1).
+; Unable to resolve symbol: bit-xand in this context
+clj꞉grains꞉> 
+(bit-flip 5 0)
+4
+clj꞉grains꞉> 
+(bit-flip (bit-and 5 0))
+; Execution error (ArityException) at grains/eval7677 (form-init6659871610152897453.clj:575).
+; Wrong number of args (1) passed to: clojure.core/bit-flip
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; No matching field found: flipBit for class java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; No matching field found: andNot for class java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; No matching field found: and for class java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:3369).
+; Cannot cast java.lang.Long to java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+0
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(bit-flip (bit-and 5 0))
+; Execution error (ArityException) at grains/eval7695 (form-init6659871610152897453.clj:608).
+; Wrong number of args (1) passed to: clojure.core/bit-flip
+clj꞉grains꞉> 
+(total)
+9223372036854775813
+clj꞉grains꞉> 
+(total)
+#'grains/total
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; No matching field found: flipBit for class java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (ArityException) at grains/total (form-init6659871610152897453.clj:7).
+; Wrong number of args (1) passed to: clojure.core/bit-flip
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; No matching method and found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:7).
+; No matching method and found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+-1
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+-1
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+-1
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+-1
+clj꞉grains꞉> 
+(.not (.and 8 0))
+; Execution error (IllegalArgumentException) at grains/eval7723 (form-init6659871610152897453.clj:657).
+; No matching method and found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+(.not (bit-and 8 0))
+; Execution error (IllegalArgumentException) at grains/eval7725 (form-init6659871610152897453.clj:661).
+; No matching field found: not for class java.lang.Long
+clj꞉grains꞉> 
+(bit-not (bit-and 8 0))
+-1
+clj꞉grains꞉> 
+(bit-not (bit-and 7 0))
+-1
+clj꞉grains꞉> 
+(.not (biginteger 64))
+-65
+clj꞉grains꞉> 
+(.not (biginteger 63))
+-64
+clj꞉grains꞉> 
+(.not (biginteger 64))
+-65
+clj꞉grains꞉> 
+(.not (biginteger 0))
+-1
+clj꞉grains꞉> 
+(bit-not  (biginteger 0))
+; Execution error (IllegalArgumentException) at grains/eval7739 (form-init6659871610152897453.clj:683).
+; bit operation not supported for: class java.math.BigInteger
+clj꞉grains꞉> 
+(or 64 63)
+64
+clj꞉grains꞉> 
+(bit-or 64 63)
+127
+clj꞉grains꞉> 
+(bit-or 64 (bit-not 63))
+-64
+clj꞉grains꞉> 
+(bit-not 63)
+-64
+clj꞉grains꞉> 
+(bit-not 2r1001)
+-10
+clj꞉grains꞉> 
+2r0110
+6
+clj꞉grains꞉> 
+(unsigned-bit-shift-right 64 1)
+32
+clj꞉grains꞉> 
+(unsigned-bit-shift-right 64 1)
+#'grains/total
+clj꞉grains꞉> 
+(total)
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:11).
+; bit operation not supported for: class java.math.BigInteger
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+9223372036854775806
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+9223372036854775808
+9223372036854775810
+9223372036854775814
+9223372036854775822
+9223372036854775838
+9223372036854775870
+9223372036854775934
+9223372036854776062
+9223372036854776318
+9223372036854776830
+9223372036854777854
+9223372036854779902
+9223372036854783998
+9223372036854792190
+9223372036854808574
+9223372036854841342
+9223372036854906878
+9223372036855037950
+9223372036855300094
+9223372036855824382
+9223372036856872958
+9223372036858970110
+9223372036863164414
+9223372036871553022
+9223372036888330238
+9223372036921884670
+9223372036988993534
+9223372037123211262
+9223372037391646718
+9223372037928517630
+9223372039002259454
+9223372041149743102
+9223372045444710398
+9223372054034644990
+9223372071214514174
+9223372105574252542
+9223372174293729278
+9223372311732682750
+9223372586610589694
+9223373136366403582
+9223374235878031358
+9223376434901286910
+9223380832947798014
+9223389629040820222
+9223407221226864638
+9223442405598953470
+9223512774343131134
+9223653511831486462
+9223934986808197118
+9224497936761618430
+9225623836668461054
+9227875636482146302
+9232379236109516798
+9241386435364257790
+9259400833873739774
+9295429630892703742
+9367487224930631678
+9511602413006487550
+9799832789158199294
+10376293541461622782
+11529215046068469758
+13835058055282163710
+18446744073709551614
+9223372036854775806
+9223372036854775806
+clj꞉grains꞉> 
+9223372036854775808
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+9223372036854775808
+9223372036854775809
+9223372036854775811
+9223372036854775815
+9223372036854775823
+9223372036854775839
+9223372036854775871
+9223372036854775935
+9223372036854776063
+9223372036854776319
+9223372036854776831
+9223372036854777855
+9223372036854779903
+9223372036854783999
+9223372036854792191
+9223372036854808575
+9223372036854841343
+9223372036854906879
+9223372036855037951
+9223372036855300095
+9223372036855824383
+9223372036856872959
+9223372036858970111
+9223372036863164415
+9223372036871553023
+9223372036888330239
+9223372036921884671
+9223372036988993535
+9223372037123211263
+9223372037391646719
+9223372037928517631
+9223372039002259455
+9223372041149743103
+9223372045444710399
+9223372054034644991
+9223372071214514175
+9223372105574252543
+9223372174293729279
+9223372311732682751
+9223372586610589695
+9223373136366403583
+9223374235878031359
+9223376434901286911
+9223380832947798015
+9223389629040820223
+9223407221226864639
+9223442405598953471
+9223512774343131135
+9223653511831486463
+9223934986808197119
+9224497936761618431
+9225623836668461055
+9227875636482146303
+9232379236109516799
+9241386435364257791
+9259400833873739775
+9295429630892703743
+9367487224930631679
+9511602413006487551
+9799832789158199295
+10376293541461622783
+11529215046068469759
+13835058055282163711
+18446744073709551615
+18446744073709551615
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+18446744073709551615
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+; Execution error (IllegalArgumentException) at grains/total (form-init6659871610152897453.clj:11).
+; No matching method flipBit found taking 1 args for class java.lang.Long
+clj꞉grains꞉> 
+#'grains/total
+clj꞉grains꞉> 
+(total)
+18446744073709551615
+clj꞉grains꞉> 
